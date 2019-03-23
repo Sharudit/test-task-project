@@ -1,0 +1,54 @@
+@import "vars.scss";
+
+ul{
+    display: block;
+    padding-left: 15px;
+    width: $item-width;
+    margin: 0px;
+}
+
+.caption{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #B2D5DB;
+    color: rgb(73, 88, 95);
+    border: 1px solid #D9E6E8;
+    transition: 0.3s all;
+    &:hover{
+        background-color: rgb(168, 199, 179);
+        cursor: pointer;
+    }
+}
+
+img{
+    width: 10px;
+    margin-left: 5px;
+    transition: 0.2s transform;
+}
+.opened>.caption>img{
+    transform: rotate(90deg);
+}
+span{
+    margin: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.caption span{
+    max-width: 200px;
+    margin-left: 10px;
+}
+.files-count{
+    font-size: 0.8em;
+    float: right;
+    margin: 5px;
+    color: rgb(114, 138, 150)
+}
+
+li{
+    display: none;
+}
+.opened>li{
+    display: block;
+}
+

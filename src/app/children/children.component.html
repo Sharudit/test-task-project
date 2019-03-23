@@ -1,0 +1,15 @@
+<div *ngFor="let item of children">
+
+  <ul class="item" [class.opened]="item.selectFlag"
+    (click)="selectItem($event, item)">
+    <div class="caption">
+      <img *ngIf="item.children" src="/assets/arrow.svg">
+      <span title="{{item.name}}">{{item.name}}</span>
+      <span class="files-count" *ngIf="item.children">{{allFilesCount(item)}} files</span>
+    </div>
+    <li>
+      <app-children *ngIf="item.children" [children]="item.children">
+      </app-children>
+    </li>
+  </ul>
+</div>

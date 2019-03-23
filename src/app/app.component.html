@@ -1,0 +1,11 @@
+<div class="form-group">
+  <span class="title">Choose JSON file to build tree</span>
+  <hr>
+  <input type="file" #uploadFile>
+  <button (click)="upload()">Upload</button>
+  <span class="error" [style.visibility]="message" >{{message}}</span>
+  <hr>
+</div>
+<div class="content">
+  <app-children [children]="data.tree"></app-children>
+</div>
